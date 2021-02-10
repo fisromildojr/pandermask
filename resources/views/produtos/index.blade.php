@@ -16,7 +16,7 @@
             <tr>
                 <td>{{--<img src="{{//$produto->imagem}}" width="100px" height="100px" alt="">--}}</td>
                 <td><a href="{{route('produtos.show', $produto)}}" alt="Visualizar" title="Visualizar">{{$produto->descricao}}</a></td>
-                <td>{{$produto->vlrproduto}}</td>
+                <td>{{ number_format($produto->vlrproduto, 2, ',', '.') }}</td>
                 <td>
                     <a href="{{route('produtos.edit', $produto)}}" class="btn btn-primary" ><span class="material-icons icon-image-preview">edit</span></a>
                     <form action="{{route('produtos.destroy', $produto)}}" style="{display: inline}" class="form-inline" method="post">
