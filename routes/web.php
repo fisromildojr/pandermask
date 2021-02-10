@@ -18,14 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('hello', function () {
-	return "Hello Programação Web 3";
+    return "Hello Programação Web 3";
 });
 
-Route::get('user/{id}', function ($id){
+Route::get('user/{id}', function ($id) {
     return "User: " . $id;
 });
 
 Route::resource('clientes', \App\Http\Controllers\ClienteController::class);
 Route::resource('categorias', \App\Http\Controllers\CategoriaController::class);
 Route::resource('produtos', \App\Http\Controllers\ProdutoController::class);
-
