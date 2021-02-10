@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Pandermask PW3</title>
 
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
