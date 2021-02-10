@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
         <label for="descricao">Descricao:</label>
-        <input type="text" name="descricao" id="" class="form-control" value="">
+        <input type="text" name="descricao" id="" class="form-control" value="{{old($produto->descricao, '')}}">
     </div>
 </div>
 <div class="row">
