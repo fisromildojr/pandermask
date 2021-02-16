@@ -17,14 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', function () {
-    return "Hello Programação Web 3";
-});
+Route::get('/dashboard', function () {
+    return redirect()->route('clientes.index');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('user/{id}', function ($id) {
-    return "User: " . $id;
-});
+require __DIR__ . '/auth.php';
 
-Route::resource('clientes', \App\Http\Controllers\ClienteController::class);
-Route::resource('categorias', \App\Http\Controllers\CategoriaController::class);
-Route::resource('produtos', \App\Http\Controllers\ProdutoController::class);
+
+Route::resource('clientes', \App\Http\Controllers\ClienteController::class)->middleware(['auth']);
+Route::resource('categorias', \App\Http\Controllers\CategoriaController::class)->middleware(['auth']);
+Route::resource('produtos', \App\Http\Controllers\ProdutoController::class)->middleware(['auth']);
