@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
         <label for="descricao">Descricao:</label>
-        <input type="text" name="descricao" id="" class="form-control" value="{{old($produto->descricao, '')}}">
+        <input type="text" name="descricao" id="" class="form-control" value="{{old($produto->descricao ?? '')}}">
     </div>
 </div>
 <div class="row">
@@ -26,8 +26,8 @@
     <div class="col-4">
         <label for="generomasc">Genero</label>
         <select name="generomasc" id="generomasc" class="form-control">
-            <option value="0" selected="true">Feminino</option>
-            <option value="1" >Masculino</option>
+            <option value="0">Feminino</option>
+            <option value="1">Masculino</option>
         </select>
     </div>
 </div>
